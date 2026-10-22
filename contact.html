@@ -64,16 +64,57 @@
   </header>
 
   <main id="main">
-    <section class="section contact-section" id="message" aria-labelledby="form-title">
+    <section class="hero hero--allin" aria-labelledby="page-title">
+      <div class="container hero__inner">
+        <p class="eyebrow reveal">Contact</p>
+        <h1 id="page-title" class="hero__title reveal">Let's get your business <span class="gradient-text">online.</span></h1>
+        <p class="hero__sub reveal">Call me, text me or send a message. I'll get back to you myself.</p>
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="tel:+61403993241" data-tel>Call me</a>
+          <a class="btn btn--ghost" href="#message">Send a message</a>
+        </div>
+        <p class="sticker">First 5<br>free<br><small>hosting extra</small></p>
+      </div>
+    </section>
+    <div class="marquee-clip">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Honesty ✦ Owning it ✦ Giving back ✦ Earning trust ✦ Showing up ✦&nbsp;</span>
+          <span>Honesty ✦ Owning it ✦ Giving back ✦ Earning trust ✦ Showing up ✦&nbsp;</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="reach-title">
+      <div class="container">
+        <h2 id="reach-title" class="why-title reveal">I'm the one who answers.</h2>
+        <div class="vals vals--3 reveal">
+          <article class="val" style="--c:#22d3ee;--r:-2deg">
+            <small>Call</small>
+            <h3><a href="tel:+61403993241" data-tel data-site="phone">+61 403 993 241</a></h3>
+            <p>Call me or text me. I'll get back to you myself.</p>
+          </article>
+          <article class="val" style="--c:#a78bfa;--r:1.5deg">
+            <small>Email</small>
+            <h3><a href="mailto:finlaysontomas@gmail.com?subject=Website%20enquiry" data-mailto data-site="email">finlaysontomas@gmail.com</a></h3>
+            <p>A few lines about your business is enough.</p>
+          </article>
+          <article class="val" style="--c:#f472b6;--r:-1deg">
+            <small>Contract</small>
+            <h3>Contracts with Innovo</h3>
+            <p>Contracts are with Innovo (Ampyre Pty Ltd, ACN 609 298 455).</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="message" aria-labelledby="form-title">
       <div class="container contact-layout">
         <div class="contact-intro">
-          <h1 id="form-title">Send a message</h1>
-          <p>Tell me about your business. The form opens an email draft. Nothing is stored on this site.</p>
-          <p><a class="contact-link" href="tel:+61403993241" data-tel data-site="phone">+61 403 993 241</a></p>
-          <p><a class="contact-link" href="mailto:finlaysontomas@gmail.com?subject=Website%20enquiry" data-mailto data-site="email">finlaysontomas@gmail.com</a></p>
-          <p class="trust-line">Contracts are with Innovo (Ampyre Pty Ltd, ACN 609 298 455).</p>
+          <h2 id="form-title" class="why-title">Tell me about your business</h2>
+          <p>The form opens an email draft. Nothing is stored on this site.</p>
         </div>
-        <div class="form-card">
+        <div class="form-card form-card--allin">
           <form class="form" data-contact-form action="mailto:finlaysontomas@gmail.com" method="post" enctype="text/plain">
             <input type="hidden" name="plan" value="">
             <div class="form__row">
@@ -100,9 +141,36 @@
         </div>
       </div>
     </section>
-    <section class="section contact-backed" aria-labelledby="backed-contact-title">
+
+    <section class="section" aria-labelledby="offers-title">
       <div class="container">
-        <article class="backed backed--compact">
+        <h2 id="offers-title" class="visually-hidden">Offers</h2>
+        <div class="mega-offers mega-offers--3">
+          <article class="mega mega--violet">
+            <p class="mega__big">Free</p>
+            <h3>For Northern Beaches charities</h3>
+            <p>I owe my community, so I build websites for free for any Northern Beaches charity. The free work is the design and the build. Hosting is not free.</p>
+            <a class="btn btn--primary" href="offers.html#charity">Read the charity offer</a>
+          </article>
+          <article class="mega mega--cyan">
+            <p class="mega__big">First 5</p>
+            <h3>Clients get a free build</h3>
+            <p>My first 5 clients get a free design and build. That's how I'm earning trust, right now. Hosting is not included.</p>
+            <a class="btn btn--primary" href="offers.html#founding">Read the founding clients offer</a>
+          </article>
+          <article class="mega mega--social">
+            <p class="mega__big">Social</p>
+            <h3>Social media marketing</h3>
+            <p>Post building, content creation, and active sales and marketing via socials. The price says Ask me.</p>
+            <a class="btn btn--primary" href="services.html#social">See social media marketing</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="backed-contact-title">
+      <div class="container">
+        <article class="backed">
           <p class="eyebrow">Backed by Innovo</p>
           <h2 id="backed-contact-title">I'm not doing this alone.</h2>
           <p>My dad, Nick Finlayson, backs BuildIT, and I trade under his company, <a href="https://innovotech.com">Innovo</a>. Every contract you sign is with Innovo (Ampyre Pty Ltd trading as Innovo), so you've got an established Sydney IT business standing behind the work.</p>
