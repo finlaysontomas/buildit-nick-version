@@ -14,20 +14,20 @@ python3 -m http.server 8080
 
 Open http://localhost:8080
 
-Check a phone width in the browser's device toolbar (about 390px wide). The menu button should open every tab, including Offers, Story and Contact.
+Check a phone width in the browser's device toolbar (about 390px wide). The menu button should open every tab, including Why I'm doing this, Offers and Contact.
 
 ## Pages
 
 | Page | File | What it is for |
 | --- | --- | --- |
-| Home | `index.html` | The offer, story prompts, four steps, current work, founding and charity offers, prices, and a contact call to action |
+| Home | `index.html` | The offer, why I'm doing this (near the top), four steps, current work, founding and charity offers, prices, and a contact call to action |
 | Services | `services.html` | Website, optional hosting, and social media marketing |
 | Work | `work.html` | Lux-Lashes, Innovo, Ember & Oat, Ironbark Electrical |
 | Pricing | `pricing.html` | Four offers and a comparison table. Two prices say Placeholder |
 | Offers | `offers.html` | First 5 clients, optional honest review, and free design and build for any Northern Beaches charity. Hosting at normal rates |
-| Story | `story.html` | Why Tomas is doing this. Every paragraph is a Placeholder prompt |
+| Why I'm doing this | `story.html` | First-person draft: who I am, what I value, giving back, earning trust, and my core values |
 | How it works | `how-it-works.html` | The four steps, with hosting called out as optional |
-| About | `about.html` | Tomas, Northern Beaches. Bio text is marked placeholder. Links to Story |
+| About | `about.html` | First person. Northern Beaches. Links to Why I'm doing this. No invented suburbs or life history |
 | FAQ | `faq.html` | The live-site questions, updated where hosting changed, plus the new offers |
 | Contact | `contact.html` | Phone, email, the Innovo line, and a form that does not use a server |
 | Ideas from Dad | `ideas.html` | These notes, on the site. Hidden from search (`noindex`) |
@@ -39,39 +39,39 @@ The same list, with the reason for each addition, is on the [Ideas from Dad](ide
 
 Each item is something a small web-business site benefits from. Take the ones you want. The rest can be deleted without breaking the others.
 
-1. **Tabs, one job per page.** Home, Services, Work, Pricing, Offers, Story, How it works, About, FAQ and Contact. The live site is one long page, which is a solid first version. Separate pages let a visitor open Pricing or Work on their own, share that link, and see the shape of the business in the menu. Social media marketing is not its own tab. It is on Services and Pricing. A Social tab would only jump to part of Services, and the bar at 1280px is already full enough.
+1. **Tabs, one job per page.** Home, Why I'm doing this, Services, Work, Pricing, Offers, How it works, About, FAQ and Contact. The live site is one long page, which is a solid first version. Separate pages let a visitor open Pricing or Work on their own, share that link, and see the shape of the business in the menu. Why I'm doing this is its own tab, next to Home, and the same heading sits on the home page under the hero. Social media marketing is not its own tab. It is on Services and Pricing.
 
 2. **Your copy stays put.** Branding, Ember & Oat, Ironbark Electrical, Lux-Lashes ([lux-lashes.com](https://www.lux-lashes.com)), Innovo ([innovotech.com](https://www.innovotech.com)), 0403 993 242 and finlaysontomas@gmail.com are from the live site. The dollar amounts are the same: **Design & build $1,250 one-time**, **Design & build + Hosting & monitoring $1,800 up front, then $99 a month**. Hosting is no longer inside the $1,250. See item 15.
 
 3. **Pricing comparison table.** Four columns: Design & build, Design & build + Hosting & monitoring, Hosting & monitoring only, and Social media marketing. Included and not included are written in words. Unset prices say Placeholder. On a narrow screen the table scrolls sideways and the first column stays visible. Items that were only on the published Website + Care plan stay on the $1,800 column. They are listed as themselves, not quietly renamed "monitoring". Backups, security updates and email support on hosting-only say Placeholder, because they were not a separate hosting-only list.
 
-4. **About you, and the Northern Beaches.** Local customers want a name and a place. The About page calls Tomas a Northern Beaches web designer and says BuildIT is for local businesses on Sydney's Northern Beaches. The same place shows in the home eyebrow, the footer, and the page's schema `areaServed`. The personal bio is a dashed **Placeholder** box. Fill it in with your own words. Nothing there is a made-up history.
+4. **About you, and the Northern Beaches.** Local customers want a name and a place. The About page says "I'm Tomas. BuildIT is my studio." and links to Why I'm doing this. The same place shows in the home eyebrow, the footer, and the page's schema `areaServed`. No suburbs, work history, client numbers or awards were invented.
 
 5. **A contact form that does not pretend to send.** GitHub Pages cannot run a backend. The form is markup: name, business, email, phone, plan and message. The button opens an email draft to BuildIT. Phone and email buttons stay on the page. The status line says nothing was stored on a server.
 
 6. **A next step on every page.** Each customer page ends with Contact, Call, or both, plus the phone number and email. People decide on the page they are already reading.
 
-7. **Mobile navigation.** Offers and Story are extra tabs. From 1040px wide and down, the links move into a menu button. The open menu scrolls on a short screen, Escape closes it, and it closes when a link is chosen. From 1041px to 1420px the desktop links use a slightly tighter gap so the new tabs still fit at 1280px.
+7. **Mobile navigation.** Why I'm doing this and Offers are extra tabs. From 1040px wide and down, the links move into a menu button. The open menu scrolls on a short screen, Escape closes it, and it closes when a link is chosen. From 1041px to 1420px the desktop links use a slightly tighter gap so the longer tab still fits at 1280px.
 
 8. **Colour contrast.** The dark BuildIT palette is unchanged. Checked against `#070a16`: body text `#eef2ff` about 17.7:1, muted text `#b4bed8` about 10.6:1, cyan `#22d3ee` about 10.9:1, violet `#a78bfa` about 7.3:1, magenta `#f472b6` about 7.5:1. WCAG AA for normal text is 4.5:1. The pricing table still says "Included" and "Not included" in words, so the difference is not colour alone. Focus outlines stay cyan.
 
 9. **Share preview.** Every public page has `og:image`, `og:image:width`, `og:image:height`, `og:image:alt`, `twitter:card` (`summary_large_image`) and `twitter:image`, pointing at the existing `og-image.png` (1200×630). Absolute URLs are required for iMessage, Facebook, LinkedIn and similar. The image file is the one already on Tomas's site.
 
-10. **No invented social proof.** No testimonials, star ratings, client counts or awards. Where a sentence still needs Tomas's voice, it is marked Placeholder.
+10. **No invented social proof.** No testimonials, star ratings, client counts or awards. Unset prices still say Placeholder. The why-copy is a first-person draft from the reasons Nick gave. It does not add life events, history, numbers or quotes.
 
 11. **Relative links and `.nojekyll`.** Links between pages are relative, so the site works in a local folder and in a GitHub project site (which is served from `/buildit-nick-version/`, not the domain root). `.nojekyll` tells GitHub Pages to serve the files as they are, instead of running Jekyll.
 
-12. **Story page, prompts only.** `story.html`, linked from Home and About, and a Story tab. Tomas has not written why he is doing this, what he values, who he is as a person, or why he is working to better himself. Every box is marked **Placeholder** and asks him to replace it. No quote, value, age, school, job or family fact was written in. The home headline no longer says "We build it, host it and keep it running", because that promised hosting on every job. The Open Graph image still contains that line, so its alt text still describes the image.
+12. **Why I'm doing this.** `story.html` is a first-person page, linked from the home section under the hero, from About, and from its own nav tab. The draft says: I'm doing this to show the world who I am and what I value; I'm working hard to better myself; I want to give back, so I build websites for free for any Northern Beaches charity, whatever they do and whoever they are; I'm offering my first 5 clients a free design and build (hosting not included) because I want to earn trust, and if they're happy I'd love an honest review. My core values are honesty, hard work, giving back, and doing what I say. Public pages do not say the copy is a placeholder. Ideas from Dad is the only place that asks Tomas to edit it into his own words. The home headline no longer says "We build it, host it and keep it running", because that promised hosting on every job. The Open Graph image still contains that line, so its alt text still describes the image.
 
 13. **Charity offer.** Free design and build only, for any charity on the Northern Beaches, regardless of what they do or who they are. It is a section on the home page, a section on `offers.html`, a short block on Pricing, an FAQ answer, and a contact-form choice. Each public spot has a contact button. Hosting is not free. Hosting is charged at the normal rates, the same rates as any other client. No separate charity hosting price was invented.
 
-14. **Founding clients.** The first 5 clients get free website design and build. Hosting is not included, and hosting is charged at the normal rates. That limit is in a highlighted box and in the body. It is the offer, not a count of clients already taken, and there is no "spots remaining" number. They are invited to share an honest review of Tomas's work if they genuinely want to. There is no obligation. No review was written.
+14. **Founding clients.** The public copy says: I'm offering my first 5 clients a free design and build because I want to earn trust. Hosting is not included, and hosting is charged at the normal rates. That limit is in a highlighted box and in the body. It is the offer, not a count of clients already taken, and there is no "spots remaining" number. If they're happy, I'd love an honest review. There is no obligation. No review was written.
 
 15. **Hosting is optional.** Design & build is the existing **$1,250** and does not include hosting. Domain setup stayed on that price, because the live site already included the domain at $1,250. Design & build + Hosting & monitoring is the existing **$1,800** up front, then **$99 a month**. Hosting & monitoring only has no price: the card, the table and the form say **Placeholder**. The contact form opens the matching choice from `?plan=design`, `design-hosting`, `hosting`, `social`, `charity` or `founding`.
 
-16. **Social media marketing.** Post building, content creation, and active sales and marketing via socials. Added on Services (`#social`), Pricing (`#social`), the home price cards, the comparison table, the FAQ and the contact form. Not a separate tab. The price says **Placeholder**. Networks and volume are placeholders too. No results, follower counts or ad spend were added.
+16. **Social media marketing.** Post building, content creation, and active sales and marketing via socials. Added on Services (`#social`), Pricing (`#social`), the home price cards, the comparison table, the FAQ and the contact form. Not a separate tab. The price says **Placeholder**. Networks and volume are not set. No results, follower counts or ad spend were added. Public pages do not carry a note asking Tomas to fill the price in.
 
-17. **One line about the parent company.** "BuildIT is part of Ampyre Pty Ltd, trading as Innovo, the parent company that contracts the work." Ampyre Pty Ltd is the company. Innovo is the trading name. The line is in the footer on every customer page, on Contact, and in the FAQ answer "Who contracts the work?" The Work page line about Nick Finlayson was already there and was left as it was. No ABN, address or founding year was added. About still calls BuildIT Tomas's studio.
+17. **One line about the parent company.** "BuildIT is part of Ampyre Pty Ltd, trading as Innovo, the parent company that contracts the work." Ampyre Pty Ltd is the company. Innovo is the trading name. The line is in the footer on every customer page, on Contact, and in the FAQ answer "Who contracts the work?" The Work page line about Nick Finlayson was already there and was left as it was. No ABN, address or founding year was added. About says "BuildIT is my studio."
 
 18. **Prices are ex GST.** Said on the Pricing page: in the introduction, above the four offers, on the comparison headings, in the table caption, and in the FAQ. The home price section says it too, so those figures are not read as GST-inclusive. The dollar amounts are unchanged. No GST was added on top.
 
