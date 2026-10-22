@@ -53,6 +53,13 @@ const SITE = {
   /* ---------- Contact form: markup only, opens an email draft, no server ---------- */
   const contactForm = document.querySelector('[data-contact-form]');
   if (contactForm) {
+    const planSelect = contactForm.querySelector('select[name="plan"]');
+    const wantedPlan = new URLSearchParams(window.location.search).get('plan');
+    const knownPlans = ['design', 'design-hosting', 'hosting', 'social', 'charity', 'founding', 'unsure'];
+    if (planSelect && knownPlans.includes(wantedPlan)) {
+      const match = [...planSelect.options].find((option) => option.dataset.plan === wantedPlan);
+      if (match) planSelect.value = match.value;
+    }
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       if (!contactForm.checkValidity()) {
@@ -121,7 +128,7 @@ const SITE = {
   if (!ctx) return;
 
   // Pointer over any of these = "not background", so no trail.
-  const CONTENT = 'a, button, input, textarea, select, label, h1, h2, h3, h4, p, li, td, th, summary, details, table, form, .card, .step, .why__item, .cta__band, .eyebrow, .logo, .nav, .placeholder, .notes article';
+  const CONTENT = 'a, button, input, textarea, select, label, h1, h2, h3, h4, p, li, td, th, summary, details, table, form, .card, .step, .why__item, .cta__band, .eyebrow, .logo, .nav, .placeholder, .notes article, .hosting-note';
 
   let w = 0, h = 0, dpr = 1;
   const resize = () => {
