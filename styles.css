@@ -270,7 +270,7 @@ h1 .gradient-text {
   .js .reveal { opacity: 1; transform: none; }
   .card { transform: none !important; }
   .swim__horizon, .marquee__track, .level__bar b, h1 .gradient-text { animation: none; }
-  .val, .val:hover, .level { transform: none; }
+  .val, .val:hover, .level, .backed { transform: none; }
 }
 
 /* Text blocks only take the width of their text, so the empty space beside them counts as background for the cursor trail */
@@ -616,6 +616,19 @@ h1, h2, h3, p, li, td, th, a { overflow-wrap: break-word; }
   border-radius: 24px; padding: 28px;
   background: linear-gradient(160deg, rgba(167,139,250,.16), rgba(7,10,22,.2));
 }
+.backed {
+  background: #0b1024;
+  border: 3px solid var(--cyan);
+  border-radius: 28px;
+  padding: 32px 28px 16px;
+  transform: rotate(-0.6deg);
+}
+.backed h2 { font-size: clamp(2rem, 4.5vw, 3.4rem); max-width: 16ch; }
+.backed p { font-size: 1.15rem; max-width: 42rem; }
+p.trust-line { margin: 14px 0 0; max-width: 40rem; font-weight: 600; color: var(--text); }
+.section:has(.backed) { overflow: hidden; }
+.hero--allin .trust-line { margin-right: 190px; }
+.footer__parent a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 1100px) {
   .vals { grid-template-columns: repeat(2, 1fr); }
   .levels { grid-template-columns: 1fr 1fr; }
@@ -625,6 +638,8 @@ h1, h2, h3, p, li, td, th, a { overflow-wrap: break-word; }
   .mega-offers, .levels, .vals { grid-template-columns: 1fr; }
   .mega { padding: 28px 22px; }
   .sticker { position: static; margin: 8px 0 18px; width: 148px; height: 148px; }
+  .backed { transform: none; }
+  .hero--allin .trust-line { margin-right: 0; }
 }
 @media (max-width: 1180px) {
   .compare-hint { display: block; }
