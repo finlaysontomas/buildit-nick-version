@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://finlaysonnick74-source.github.io/buildit-nick-version/sitemap.xml

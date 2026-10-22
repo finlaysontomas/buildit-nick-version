@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ideas from Dad | BuildIT</title>
+  <meta name="description" content="Notes from Nick to Tomas about what this version of the BuildIT site adds, and why.">
+  <meta name="theme-color" content="#070a16">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://finlaysonnick74-source.github.io/buildit-nick-version/ideas.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BuildIT">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:title" content="Ideas from Dad | BuildIT">
+  <meta property="og:description" content="Notes from Nick to Tomas about what this version of the BuildIT site adds, and why.">
+  <meta property="og:url" content="https://finlaysonnick74-source.github.io/buildit-nick-version/ideas.html">
+  <meta property="og:image" content="https://finlaysonnick74-source.github.io/buildit-nick-version/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BuildIT. Your business online. We build it, host it and keep it running. Websites for local businesses, done for you.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ideas from Dad | BuildIT">
+  <meta name="twitter:description" content="Notes from Nick to Tomas about what this version of the BuildIT site adds, and why.">
+  <meta name="twitter:image" content="https://finlaysonnick74-source.github.io/buildit-nick-version/og-image.png">
+  <meta name="twitter:image:alt" content="BuildIT. Your business online. We build it, host it and keep it running. Websites for local businesses, done for you.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <canvas id="trail" aria-hidden="true"></canvas>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a class="logo" href="index.html" data-site-label>
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span data-site="name">BuildIT</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav__toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <nav class="nav__menu" id="nav-menu" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero page-hero" aria-labelledby="page-title">
+      <div class="container hero__inner">
+        <p class="eyebrow reveal">Notes for Tomas</p>
+        <h1 id="page-title" class="hero__title reveal">Ideas from <span class="gradient-text">Dad</span></h1>
+        <p class="hero__sub reveal">This page is for you, not for customers. It lists what this version adds to your BuildIT site, and why. The same notes are in the README. Take the bits you like.</p>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="ideas-title">
+      <div class="container">
+        <h2 id="ideas-title" class="section__title reveal">What changed, and why</h2>
+        <div class="notes">
+          <article class="reveal">
+            <h3>Tabs, one job per page</h3>
+            <p>Home, Services, Work, Pricing, How it works, About, FAQ and Contact. Your live site is one long page, which is a good start. Separate pages let someone open Pricing or Work directly, and they show the shape of the business at a glance.</p>
+          </article>
+          <article class="reveal">
+            <h3>Your copy stays</h3>
+            <p>BuildIT branding, the four-part offer, the four steps, Ember &amp; Oat, Ironbark Electrical, Lux-Lashes (lux-lashes.com), Innovo (innovotech.com), the FAQ, the phone number and the email are yours. Prices are unchanged: Website $1,250 one-time, Website + Care $1,800 up front then $99 a month.</p>
+          </article>
+          <article class="reveal">
+            <h3>Pricing comparison table</h3>
+            <p>The two cards are still there. The table lines up included and not included in words, because the Website + Care list is long and a table is easier to scan on a phone.</p>
+          </article>
+          <article class="reveal">
+            <h3>About you, and the Northern Beaches</h3>
+            <p>Local customers want to know who they are emailing. The About page names you and positions BuildIT on Sydney's Northern Beaches. The bio box is a placeholder on purpose. I didn't invent a work history, client numbers or awards.</p>
+          </article>
+          <article class="reveal">
+            <h3>A contact form that doesn't pretend to send</h3>
+            <p>The form is markup only. There is no backend, which is what you want on GitHub Pages. It opens an email draft. Phone and email links stay on the page for people who don't want a form.</p>
+          </article>
+          <article class="reveal">
+            <h3>A next step on every page</h3>
+            <p>Each page ends with contact, call, or both. People decide on the page they are already reading. They shouldn't have to hunt for a button.</p>
+          </article>
+          <article class="reveal">
+            <h3>Mobile menu and contrast</h3>
+            <p>Eight items don't fit in a phone header, so the menu becomes a button before the bar overflows, and the open menu scrolls. Your dark colours already clear WCAG AA for normal text (muted text, cyan, violet and magenta on the background are all above 4.5:1). The table still says "Included" and "Not included" in words.</p>
+          </article>
+          <article class="reveal">
+            <h3>Share preview image</h3>
+            <p>Every public page has Open Graph and Twitter card tags pointing at your existing og-image.png, with width, height and alt text. Links in messages and social apps then show the BuildIT card instead of a blank preview.</p>
+          </article>
+          <article class="reveal">
+            <h3>Nothing made up</h3>
+            <p>No testimonials, review scores, "trusted by" counts or awards. Where a sentence still needs your voice, it is marked Placeholder.</p>
+          </article>
+        </div>
+        <p class="reveal more-link"><a href="index.html">Back to the home page</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p>&copy; <span data-year></span> <span data-site="name">BuildIT</span></p>
+        <p class="footer__local">Websites for local businesses on Sydney's Northern Beaches.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="ideas.html" aria-current="page">Ideas from Dad</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
