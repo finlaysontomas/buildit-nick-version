@@ -64,82 +64,51 @@
   </header>
 
   <main id="main">
-    <section class="hero page-hero" aria-labelledby="page-title">
-      <div class="container hero__inner">
-        <p class="eyebrow reveal">Contact</p>
-        <h1 id="page-title" class="hero__title reveal">Ready to get your business <span class="gradient-text">online?</span></h1>
-        <p class="hero__sub reveal">Contact us by phone or email with a few lines about your business. We'll answer your questions and suggest the plan that suits you best.</p>
-        <p class="trust-line reveal">Contracts are with Innovo (Ampyre Pty Ltd, ACN 609 298 455).</p>
-      </div>
-    </section>
-    <section class="section" aria-labelledby="backed-contact-title">
-      <div class="container">
-        <div class="reveal">
-          <article class="backed">
-            <p class="eyebrow">Backed by Innovo</p>
-            <h2 id="backed-contact-title">I'm not doing this alone.</h2>
-            <p>My dad, Nick Finlayson, backs BuildIT, and I trade under his company, <a href="https://innovotech.com">Innovo</a>. Every contract you sign is with Innovo (Ampyre Pty Ltd trading as Innovo), so you've got an established Sydney IT business standing behind the work.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section class="section" id="message" aria-labelledby="form-title">
-      <div class="container">
-        <h2 id="form-title" class="section__title reveal">Send a message</h2>
-        <p class="section__lead reveal">The form does not connect to a server. Nothing is stored on this website. Submitting opens an email draft to BuildIT. You can also call or email directly.</p>
-        <p class="reveal">My first 5 clients get a free design and build. That's how I'm earning trust, right now. Hosting is not included. Hosting is charged at the normal rates. I'll earn an honest review. There is no obligation. I owe my community, so I build websites for free for any Northern Beaches charity, whatever they do and whoever they are. I'm doing that now. That free work is design and build only. Hosting is not free. All prices are ex GST.</p>
-        <div class="form-card reveal">
-          <div class="hero__actions contact-actions">
-            <a class="btn btn--primary" href="tel:+61403993241" data-tel>Call <span data-site="phone">+61 403 993 241</span></a>
-            <a class="btn btn--ghost" href="mailto:finlaysontomas@gmail.com?subject=Website%20enquiry" data-mailto>Email us</a>
-          </div>
+    <section class="section contact-section" id="message" aria-labelledby="form-title">
+      <div class="container contact-layout">
+        <div class="contact-intro">
+          <h1 id="form-title">Send a message</h1>
+          <p>Tell me about your business. The form opens an email draft. Nothing is stored on this site.</p>
+          <p><a class="contact-link" href="tel:+61403993241" data-tel data-site="phone">+61 403 993 241</a></p>
+          <p><a class="contact-link" href="mailto:finlaysontomas@gmail.com?subject=Website%20enquiry" data-mailto data-site="email">finlaysontomas@gmail.com</a></p>
           <p class="trust-line">Contracts are with Innovo (Ampyre Pty Ltd, ACN 609 298 455).</p>
+        </div>
+        <div class="form-card">
           <form class="form" data-contact-form action="mailto:finlaysontomas@gmail.com" method="post" enctype="text/plain">
+            <input type="hidden" name="plan" value="">
             <div class="form__row">
               <label>
-                <span>Your name <span class="req">(required)</span></span>
+                <span>Name</span>
                 <input name="name" type="text" autocomplete="name" required maxlength="120">
               </label>
               <label>
-                <span>Business name <span class="req">(required)</span></span>
-                <input name="business" type="text" autocomplete="organization" required maxlength="160">
-              </label>
-            </div>
-            <div class="form__row">
-              <label>
-                <span>Email <span class="req">(required)</span></span>
+                <span>Email</span>
                 <input name="email" type="email" autocomplete="email" inputmode="email" required maxlength="160">
               </label>
-              <label>
-                <span>Phone <span class="req">(optional)</span></span>
-                <input name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="40">
-              </label>
             </div>
             <label>
-              <span>Plan <span class="req">(required)</span></span>
-              <select name="plan" required>
-                <option value="">Choose a plan</option>
-                <option data-plan="design">Design &amp; build — $1,250 one-time (hosting not included)</option>
-                <option data-plan="design-hosting">Design &amp; build + Hosting &amp; monitoring — $1,800 up front, then $99/month</option>
-                <option data-plan="hosting">Hosting &amp; monitoring only — price not set yet</option>
-                <option data-plan="social">Social media marketing — price not set yet</option>
-                <option data-plan="charity">Charity on the Northern Beaches — free design and build only (hosting at normal rates)</option>
-                <option data-plan="founding">Founding client — free design and build (hosting at normal rates)</option>
-                <option data-plan="unsure">Not sure yet</option>
-              </select>
+              <span>Phone <span class="req">(optional)</span></span>
+              <input name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="40">
             </label>
             <label>
-              <span>Message <span class="req">(required)</span></span>
-              <textarea name="message" required maxlength="4000" placeholder="What your business does, and any sites you like the look of."></textarea>
+              <span>Message</span>
+              <textarea name="message" rows="4" required maxlength="4000"></textarea>
             </label>
-            <p class="form__note">This form does not send by itself. The button opens an email to BuildIT with your message filled in, and you send it from your email app. If JavaScript is off, your browser's own mailto handling is used instead.</p>
-            <button class="btn btn--primary" type="submit">Open email draft</button>
+            <button class="btn btn--primary" type="submit">Send</button>
             <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
       </div>
     </section>
-
+    <section class="section contact-backed" aria-labelledby="backed-contact-title">
+      <div class="container">
+        <article class="backed backed--compact">
+          <p class="eyebrow">Backed by Innovo</p>
+          <h2 id="backed-contact-title">I'm not doing this alone.</h2>
+          <p>My dad, Nick Finlayson, backs BuildIT, and I trade under his company, <a href="https://innovotech.com">Innovo</a>. Every contract you sign is with Innovo (Ampyre Pty Ltd trading as Innovo), so you've got an established Sydney IT business standing behind the work.</p>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">

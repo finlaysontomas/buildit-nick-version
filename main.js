@@ -53,13 +53,10 @@ const SITE = {
   /* ---------- Contact form: markup only, opens an email draft, no server ---------- */
   const contactForm = document.querySelector('[data-contact-form]');
   if (contactForm) {
-    const planSelect = contactForm.querySelector('select[name="plan"]');
+    const planInput = contactForm.querySelector('[name="plan"]');
     const wantedPlan = new URLSearchParams(window.location.search).get('plan');
     const knownPlans = ['design', 'design-hosting', 'hosting', 'social', 'charity', 'founding', 'unsure'];
-    if (planSelect && knownPlans.includes(wantedPlan)) {
-      const match = [...planSelect.options].find((option) => option.dataset.plan === wantedPlan);
-      if (match) planSelect.value = match.value;
-    }
+    if (planInput && knownPlans.includes(wantedPlan)) planInput.value = wantedPlan;
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       if (!contactForm.checkValidity()) {
@@ -68,16 +65,16 @@ const SITE = {
       }
       const data = new FormData(contactForm);
       const phone = String(data.get('phone') || '').trim();
+      const plan = String(data.get('plan') || '').trim();
       const body = [
         `Name: ${data.get('name')}`,
-        `Business: ${data.get('business')}`,
         `Email: ${data.get('email')}`,
         `Phone: ${phone || '(not given)'}`,
-        `Plan: ${data.get('plan')}`,
+        plan ? `Plan: ${plan}` : '',
         '',
         String(data.get('message') || ''),
-      ].join('\n');
-      const subject = `Website enquiry: ${data.get('plan')}`;
+      ].filter((line, i, lines) => line !== '' || lines[i - 1] !== '').join('\n');
+      const subject = plan ? `Website enquiry: ${plan}` : 'Website enquiry';
       const status = document.getElementById('form-status');
       if (status) {
         status.textContent = 'Nothing was sent to a server. Your email app should open with this message ready to send.';

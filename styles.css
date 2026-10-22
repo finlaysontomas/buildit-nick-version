@@ -668,3 +668,68 @@ p.trust-line { margin: 14px 0 0; max-width: 40rem; font-weight: 600; color: var(
 @media (max-width: 1180px) {
   .compare-hint { display: block; }
 }
+
+/* Contact: compact two-column section. No scroll-reveal, so the form is visible on first paint. */
+.contact-section { padding: 40px 0 28px; }
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 520px);
+  gap: 28px 48px;
+  align-items: start;
+}
+.contact-intro h1 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  max-width: 14ch;
+  margin: 0 0 12px;
+}
+.contact-intro p { margin: 0 0 8px; max-width: 36rem; color: var(--muted); }
+.contact-intro .trust-line { margin: 12px 0 0; }
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 600;
+  color: var(--text);
+}
+.contact-layout .form-card {
+  width: 100%;
+  max-width: 520px;
+  justify-self: end;
+  margin: 0;
+  padding: 16px;
+  border-width: 2px;
+  border-radius: 16px;
+}
+.contact-layout .form { gap: 14px; margin-top: 0; }
+.contact-layout .form__row { gap: 14px; }
+.contact-layout .form label { gap: 6px; font-size: 0.9rem; line-height: 1.2; }
+.contact-layout .form input,
+.contact-layout .form textarea {
+  min-height: 46px;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+.contact-layout .form textarea {
+  min-height: 0;
+  height: auto;
+  line-height: 1.4;
+  resize: vertical;
+}
+.contact-layout .form .btn { min-height: 46px; padding: 10px 22px; }
+.contact-layout .form__status:empty { display: none; }
+.contact-backed { padding: 8px 0 48px; }
+.backed--compact {
+  padding: 16px 18px 4px;
+  border-width: 2px;
+  border-radius: 16px;
+}
+.backed--compact .eyebrow { margin-bottom: 10px; }
+.backed--compact h2 { font-size: 1.45rem; max-width: none; margin-bottom: 8px; }
+.backed--compact p { font-size: 1rem; margin-bottom: 12px; }
+@media (max-width: 860px) {
+  .contact-layout { grid-template-columns: 1fr; }
+  .contact-layout .form-card { max-width: 520px; justify-self: start; }
+}
+@media (max-width: 560px) {
+  .contact-layout .form-card { max-width: none; }
+}
