@@ -119,7 +119,7 @@ header, main, footer { position: relative; z-index: 1; }
   font-weight: 600; font-size: 1rem; text-decoration: none; white-space: nowrap;
   transition: transform .2s, box-shadow .25s, background .25s, border-color .25s;
 }
-.btn--sm { min-height: 40px; padding: 8px 18px; font-size: .95rem; }
+.btn--sm { min-height: 44px; padding: 8px 18px; font-size: .95rem; }
 .btn--lg { min-height: 56px; padding: 14px 34px; font-size: 1.1rem; }
 .btn--primary {
   color: #050814; background: var(--grad); background-size: 160% 100%;
@@ -131,7 +131,7 @@ header, main, footer { position: relative; z-index: 1; }
 
 /* Hero */
 .hero { min-height: calc(100vh - var(--nav-h)); min-height: calc(100svh - var(--nav-h)); display: grid; align-items: center; padding: 72px 0 96px; }
-.hero__inner { max-width: 880px; }
+.hero__inner { max-width: none; }
 .eyebrow {
   display: inline-block; margin-bottom: 18px; padding: 6px 14px; border-radius: 999px;
   font-size: .875rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
@@ -475,9 +475,26 @@ h1 .gradient-text {
 .compare thead .col-care { background: #17142e; }
 .compare .price-cell { display: block; font-weight: 500; color: var(--muted); font-size: .92rem; margin-top: 4px; }
 
-.form { display: grid; gap: 16px; max-width: 720px; }
-.form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.form label { display: grid; gap: 6px; font-weight: 600; }
+.form-card {
+  background: #0b1024;
+  border: 3px solid var(--cyan);
+  border-radius: 28px;
+  padding: 32px 28px;
+  margin-top: 8px;
+}
+.form { display: grid; gap: 18px; width: 100%; max-width: none; }
+.form-card .form { margin-top: 22px; }
+.form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+.form label {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: var(--text);
+}
 .form .req { color: var(--cyan); font-weight: 600; }
 .form input, .form select, .form textarea {
   width: 100%;
@@ -485,15 +502,21 @@ h1 .gradient-text {
   color: var(--text);
   background: #10162c;
   border: 1px solid rgba(255, 255, 255, .28);
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 12px 14px;
   min-height: 48px;
 }
+.form select { color-scheme: dark; }
 .form textarea { min-height: 150px; resize: vertical; }
 .form input::placeholder, .form textarea::placeholder { color: #c5cde4; }
-.form__note, .form__status { color: var(--muted); margin: 0; }
+.form input:focus-visible, .form select:focus-visible, .form textarea:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 2px;
+  border-color: var(--cyan);
+}
+.form__note, .form__status { color: var(--muted); margin: 0; font-weight: 400; font-family: var(--font-body); }
 .form__status:not(:empty) { color: var(--text); margin-top: 4px; }
-.form .btn { justify-self: start; }
+.form .btn { justify-self: start; min-height: 48px; }
 
 .notes { display: grid; gap: 16px; }
 .notes article {
@@ -506,6 +529,8 @@ h1 .gradient-text {
 .notes p { color: var(--muted); }
 
 .prose { max-width: 720px; }
+.container.prose { max-width: none; }
+.container.prose > :not(.vals) { max-width: 720px; }
 .prose p, .prose li { color: var(--muted); }
 .prose ul { list-style: disc; padding-left: 1.2em; display: grid; gap: 8px; margin-bottom: 1em; }
 .prose a { text-underline-offset: 3px; }
@@ -521,7 +546,7 @@ h1 .gradient-text {
   .nav__menu { gap: 10px; }
   .nav__menu ul { gap: 10px; }
   .nav__menu ul a { font-size: 0.9rem; }
-  .nav .btn--sm { padding: 8px 14px; min-height: 40px; }
+  .nav .btn--sm { padding: 8px 14px; min-height: 44px; }
 }
 h1, h2, h3, p, li, td, th, a { overflow-wrap: break-word; }
 .card .plan__price { flex-wrap: wrap; }
@@ -621,12 +646,10 @@ h1, h2, h3, p, li, td, th, a { overflow-wrap: break-word; }
   border: 3px solid var(--cyan);
   border-radius: 28px;
   padding: 32px 28px 16px;
-  transform: rotate(-0.6deg);
 }
 .backed h2 { font-size: clamp(2rem, 4.5vw, 3.4rem); max-width: 16ch; }
 .backed p { font-size: 1.15rem; max-width: 42rem; }
 p.trust-line { margin: 14px 0 0; max-width: 40rem; font-weight: 600; color: var(--text); }
-.section:has(.backed) { overflow: hidden; }
 .hero--allin .trust-line { margin-right: 190px; }
 .footer__parent a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 1100px) {
@@ -638,8 +661,9 @@ p.trust-line { margin: 14px 0 0; max-width: 40rem; font-weight: 600; color: var(
   .mega-offers, .levels, .vals { grid-template-columns: 1fr; }
   .mega { padding: 28px 22px; }
   .sticker { position: static; margin: 8px 0 18px; width: 148px; height: 148px; }
-  .backed { transform: none; }
   .hero--allin .trust-line { margin-right: 0; }
+  .form-card { padding: 22px 18px; border-radius: 22px; }
+  .contact-actions .btn, .form .btn { width: 100%; }
 }
 @media (max-width: 1180px) {
   .compare-hint { display: block; }
