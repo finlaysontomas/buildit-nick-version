@@ -128,7 +128,7 @@ const SITE = {
   if (!ctx) return;
 
   // Pointer over any of these = "not background", so no trail.
-  const CONTENT = 'a, button, input, textarea, select, label, h1, h2, h3, h4, p, li, td, th, summary, details, table, form, .card, .step, .why__item, .cta__band, .eyebrow, .logo, .nav, .placeholder, .notes article, .hosting-note';
+  const CONTENT = 'a, button, input, textarea, select, label, h1, h2, h3, h4, p, li, td, th, summary, details, table, form, .card, .step, .why__item, .cta__band, .eyebrow, .logo, .nav, .placeholder, .notes article, .hosting-note, .val, .mega, .level, .sticker, .marquee, .social-band';
 
   let w = 0, h = 0, dpr = 1;
   const resize = () => {

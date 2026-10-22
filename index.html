@@ -64,6 +64,7 @@
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="story.html">Why I'm doing this</a></li>
           <li><a href="services.html">Services</a></li>
+          <li><a href="services.html#social">Social</a></li>
           <li><a href="work.html">Work</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="offers.html">Offers</a></li>
@@ -77,46 +78,60 @@
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="page-title">
+    <section class="hero hero--allin" aria-labelledby="page-title">
       <div class="container hero__inner">
         <p class="eyebrow reveal">Northern Beaches · Websites for local businesses</p>
-        <h1 id="page-title" class="hero__title reveal">Your business online.<br><span class="gradient-text">We design it and build it.</span></h1>
-        <p class="hero__sub reveal">We design and build a website for your business, and set up your choice of a .com or a .com.au. Hosting and monitoring are optional. No tech skills needed on the design and build. You tell us about your business, we do the rest, and you get a site you're proud to send customers to.</p>
-        <div class="hero__actions reveal"><a class="btn btn--primary" href="contact.html">Contact us</a><a class="btn btn--ghost" href="work.html">See our work</a></div>
-        <p class="hero__trust reveal">Design &amp; build $1,250 <span aria-hidden="true">·</span> Hosting is optional <span aria-hidden="true">·</span> No tech skills needed</p>
+        <h1 id="page-title" class="hero__title reveal">Your business <span class="gradient-text">online.</span> Designed &amp; built.</h1>
+        <p class="hero__sub reveal">I design and build a website for your business, and set up your choice of a .com or a .com.au. Hosting and monitoring are optional. You tell me about your business. I do the rest.</p>
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="contact.html">Contact me</a>
+          <a class="btn btn--ghost" href="work.html">See the work</a>
+        </div>
+        <p class="sticker">Design &amp; build<br>$1,250<br><small>ex GST</small></p>
       </div>
     </section>
+    <div class="marquee-clip">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Honesty ✦ Owning it ✦ Giving back ✦ Earning trust ✦ Showing up ✦&nbsp;</span>
+          <span>Honesty ✦ Owning it ✦ Giving back ✦ Earning trust ✦ Showing up ✦&nbsp;</span>
+        </div>
+      </div>
+    </div>
 
     <section class="section" id="story" aria-labelledby="story-title">
       <div class="container">
         <p class="eyebrow reveal">Why I'm doing this</p>
-        <h2 id="story-title" class="section__title reveal">Why I'm doing this</h2>
-        <p class="section__lead reveal">Not long ago I was making choices I'm not proud of, and I hurt people. I'm changing that, right now. This business is how I'm doing it, one honest job at a time.</p>
-        <h3 class="work__subtitle reveal">My core values</h3>
-        <p class="section__lead reveal">These are what I'm doing now, and every day.</p>
-        <div class="cards cards--2">
-          <article class="card reveal">
-            <h3>Honesty</h3>
-            <p>I tell you the real price and timeline, no surprises.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Owning it</h3>
-            <p>If I get something wrong, I fix it.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Giving back</h3>
-            <p>I build websites for free for any Northern Beaches charity, whatever they do and whoever they are, because I owe my community. That free work is the design and the build. Hosting is not free.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Earning trust</h3>
-            <p>My first 5 clients get a free design and build, and I'll earn their honest review. Hosting is not included. There is no obligation.</p>
-          </article>
-          <article class="card reveal">
-            <h3>Showing up</h3>
-            <p>I do what I say, when I say.</p>
-          </article>
-        </div>
-        <p class="reveal more-link"><a href="story.html">Read why I'm doing this</a></p>
+        <h2 id="story-title" class="why-title reveal">Not long ago I was making choices I'm not proud of. I'm changing that, right now.</h2>
+        <p class="section__lead reveal">This business is how I'm doing it, one honest job at a time. These are the values I'm living by now, and every day.</p>
+        <div class="vals reveal">
+            <article class="val" style="--c:#22d3ee;--r:-2deg">
+              <small>Value 01</small>
+              <h3>Honesty</h3>
+              <p>I tell you the real price and timeline, no surprises.</p>
+            </article>
+            <article class="val" style="--c:#a78bfa;--r:1.5deg">
+              <small>Value 02</small>
+              <h3>Owning it</h3>
+              <p>If I get something wrong, I fix it.</p>
+            </article>
+            <article class="val" style="--c:#f472b6;--r:-1deg">
+              <small>Value 03</small>
+              <h3>Giving back</h3>
+              <p>I build websites for free for any Northern Beaches charity, whatever they do and whoever they are, because I owe my community. Hosting is not free.</p>
+            </article>
+            <article class="val" style="--c:#22d3ee;--r:2deg">
+              <small>Value 04</small>
+              <h3>Earning trust</h3>
+              <p>My first 5 clients get a free design and build, and I'll earn their honest review. Hosting is not included. There is no obligation.</p>
+            </article>
+            <article class="val" style="--c:#a78bfa;--r:-1.5deg">
+              <small>Value 05</small>
+              <h3>Showing up</h3>
+              <p>I do what I say, when I say.</p>
+            </article>
+          </div>
+          <p class="more-link reveal"><a href="story.html">Read why I'm doing this</a></p>
       </div>
     </section>
 
@@ -147,8 +162,12 @@
             <p>On Design &amp; build + Hosting &amp; monitoring we keep looking after the site after launch: backups, security updates, one update a month, and help by email when you need a change.</p>
           </article>
         </div>
-        <p class="reveal more-link"><a href="services.html">See services and why BuildIT</a></p>
-        <p class="reveal">Social media marketing covers post building, content creation, and active sales and marketing via socials. The price is not set. It is marked Placeholder on <a href="services.html#social">Services</a> and <a href="pricing.html#social">Pricing</a>.</p>
+        <div class="social-band reveal">
+          <p class="eyebrow">Social</p>
+          <h3>Social media marketing</h3>
+          <p>Post building, content creation, and active sales and marketing via socials. The price is not set. It says Ask me. Hosting and the website are separate.</p>
+          <a class="btn btn--primary" href="services.html#social">See social media marketing</a>
+        </div>
       </div>
     </section>
 
@@ -220,34 +239,19 @@
 
     <section class="section" id="offers" aria-labelledby="offers-title">
       <div class="container">
-        <p class="eyebrow reveal">Offers</p>
-        <h2 id="offers-title" class="section__title reveal">Founding clients and charities</h2>
-        <p class="section__lead reveal">Both offers are free design and build. Hosting is charged at the normal rates. Prices on the pricing page are ex GST.</p>
-        <div class="cards cards--2">
-          <article class="card reveal">
-            <h3>First 5 clients</h3>
-            <div class="stack">
-              <p>My first 5 clients get a free design and build. That's how I'm earning trust, right now.</p>
-              <div class="hosting-note">
-                <p><strong>Hosting is not included.</strong> Hosting is charged at the normal rates.</p>
-              </div>
-              <p>I'll earn an honest review. There is no obligation.</p>
-            </div>
-            <div class="offer-actions">
-              <a class="btn btn--primary" href="offers.html#founding">Read the founding clients offer</a>
-              <a class="btn btn--ghost" href="contact.html?plan=founding#message">Ask about a founding client place</a>
-            </div>
+        <h2 id="offers-title" class="visually-hidden">Offers</h2>
+        <div class="mega-offers">
+          <article class="mega mega--violet">
+            <p class="mega__big">Free</p>
+            <h3>For Northern Beaches charities</h3>
+            <p>I owe my community, so I build websites for free for any Northern Beaches charity, whatever they do and whoever they are. I'm doing that now. The free work is the design and the build. Hosting is not free.</p>
+            <a class="btn btn--primary" href="offers.html#charity">Read the charity offer</a>
           </article>
-          <article class="card reveal">
-            <h3>Any Northern Beaches charity</h3>
-            <div class="stack">
-              <p>I owe my community, so I build websites for free for any Northern Beaches charity, whatever they do and whoever they are. I'm doing that now. The free work is design and build only.</p>
-              <p><strong>Hosting is not free.</strong> Hosting is charged at the normal rates.</p>
-            </div>
-            <div class="offer-actions">
-              <a class="btn btn--primary" href="offers.html#charity">Read the charity offer</a>
-              <a class="btn btn--ghost" href="contact.html?plan=charity#message">Ask about a charity website</a>
-            </div>
+          <article class="mega mega--cyan">
+            <p class="mega__big">First 5</p>
+            <h3>Clients get a free build</h3>
+            <p>My first 5 clients get a free design and build. That's how I'm earning trust, right now. Hosting is not included. I'll earn an honest review. There is no obligation.</p>
+            <a class="btn btn--primary" href="offers.html#founding">Read the founding clients offer</a>
           </article>
         </div>
       </div>
@@ -255,40 +259,55 @@
 
     <section class="section" id="prices" aria-labelledby="prices-title">
       <div class="container">
-        <p class="eyebrow reveal">Pricing</p>
-        <h2 id="prices-title" class="section__title reveal">Hosting is optional</h2>
-        <p class="section__lead reveal">Design and build is $1,250, paid once. Add hosting and monitoring if you want us to keep the site online. Two prices are not set yet. Those cards say Placeholder. All prices are ex GST.</p>
-        <div class="plans">
-          <article class="card plan reveal">
-            <h3 class="plan__name">Design &amp; build</h3>
-            <p class="plan__price"><span class="plan__amount">$1,250</span> <span class="plan__term">one-time</span></p>
-            <p class="plan__note">One-time payment. Hosting is not included.</p>
-            <p class="plan__desc">We design and build the site, and set up your choice of a .com or a .com.au. You can add hosting, or host it yourself.</p>
-            <a class="btn btn--ghost plan__cta" href="pricing.html">Compare what's included</a>
-          </article>
-          <article class="card plan plan--featured reveal">
-            <p class="plan__tag">Hosting included</p>
-            <h3 class="plan__name">Design &amp; build + Hosting &amp; monitoring</h3>
-            <p class="plan__price"><span class="plan__amount">$1,800</span> <span class="plan__term">up front</span></p>
-            <p class="plan__note">Then $99 a month for hosting and monitoring.</p>
-            <p class="plan__desc">Design and build, plus hosting and monitoring. Backups, security updates, email support and one update a month are included.</p>
-            <a class="btn btn--primary plan__cta" href="pricing.html#compare">See the full comparison</a>
-          </article>
-          <article class="card plan reveal" id="hosting-only">
-            <h3 class="plan__name">Hosting &amp; monitoring only</h3>
-            <p class="plan__price"><span class="plan__amount plan__amount--pending">Placeholder</span></p>
-            <p class="plan__note">Price not set. This is not a quote.</p>
-            <p class="plan__desc">Hosting and monitoring without design and build. The figure is still to be written in.</p>
-            <a class="btn btn--ghost plan__cta" href="pricing.html#hosting-only">See hosting only</a>
-          </article>
-          <article class="card plan reveal">
-            <h3 class="plan__name">Social media marketing</h3>
-            <p class="plan__price"><span class="plan__amount plan__amount--pending">Placeholder</span></p>
-            <p class="plan__note">Price not set. This is not a quote.</p>
-            <p class="plan__desc">Post building, content creation, and active sales and marketing via socials. The figure is still to be written in.</p>
-            <a class="btn btn--ghost plan__cta" href="pricing.html#social">See social media pricing</a>
-          </article>
-        </div>
+          <p class="eyebrow reveal">Pricing · all prices ex GST</p>
+          <h2 id="prices-title" class="why-title reveal">Pick your level.</h2>
+          <p class="section__lead reveal">I say what is included, and I say what is not. Hosting on its own still has no figure. That price says Placeholder.</p>
+          <div class="levels reveal">
+            <article class="level" style="--c:#22d3ee;--w:55%;--r:-1.2deg">
+              <p class="level__tag">Level 1</p>
+              <h3>Design &amp; build</h3>
+              <p class="level__amt">$1,250</p>
+              <p>one-time, ex GST</p>
+              <div class="level__bar" aria-hidden="true"><b></b></div>
+              <ul>
+                <li>Design and build</li>
+                <li>Your .com or .com.au set up</li>
+                <li>Handed over for you to host</li>
+              </ul>
+            </article>
+            <article class="level" style="--c:#a78bfa;--w:100%;--r:1deg">
+              <p class="level__tag">Level 2</p>
+              <h3>Design &amp; build + Hosting &amp; monitoring</h3>
+              <p class="level__amt">$1,800</p>
+              <p>up front, then $99/month, ex GST</p>
+              <div class="level__bar" aria-hidden="true"><b></b></div>
+              <ul>
+                <li>Hosting and HTTPS</li>
+                <li>Backups and security updates</li>
+                <li>One update a month, help by email</li>
+              </ul>
+            </article>
+            <article class="level" id="social" style="--c:#f472b6;--w:40%;--r:-0.8deg">
+              <p class="level__tag">Level 3</p>
+              <h3>Social media marketing</h3>
+              <p class="level__amt">Ask me</p>
+              <p>Price not set. This is not a quote.</p>
+              <div class="level__bar" aria-hidden="true"><b></b></div>
+              <ul>
+                <li>Post building</li>
+                <li>Content creation</li>
+                <li>Active sales and marketing via socials</li>
+              </ul>
+            </article>
+            <article class="level level--unlock" style="--c:#22d3ee;--w:22%;--r:1.2deg">
+              <p class="level__tag">Unlockable</p>
+              <h3>Free design &amp; build</h3>
+              <p>For any Northern Beaches charity, and for my first 5 clients. That's how I'm giving back and earning trust, right now.</p>
+              <div class="level__bar" aria-hidden="true"><b></b></div>
+              <p><strong>Hosting is not included.</strong> Hosting is charged at the normal rates.</p>
+            </article>
+          </div>
+          <p class="more-link reveal"><a href="pricing.html">See every level, including hosting only</a></p>
       </div>
     </section>
 
@@ -321,6 +340,7 @@
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="story.html">Why I'm doing this</a></li>
           <li><a href="services.html">Services</a></li>
+          <li><a href="services.html#social">Social</a></li>
           <li><a href="work.html">Work</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="offers.html">Offers</a></li>
