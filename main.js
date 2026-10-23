@@ -5,7 +5,7 @@
    ============================================================ */
 const SITE = {
   name: 'BuildIT',
-  email: 'finlaysontomas@gmail.com',
+  email: 'tomas@buildit.net.au',
   emailSubject: 'Website enquiry',
   phone: '+61 403 993 241',
   phoneIntl: '+61403993241',

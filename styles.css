@@ -612,12 +612,12 @@ h1, h2, h3, p, li, td, th, a { overflow-wrap: break-word; }
 .hero--allin .hero__inner { position: relative; }
 .hero--allin .hero__title { font-size: clamp(3rem, 8.4vw, 7.2rem); max-width: 12ch; letter-spacing: -.04em; }
 .sticker {
-  position: absolute; right: 0; top: 8px; width: 168px; height: 168px; border-radius: 50%;
+  position: absolute; right: 0; top: 8px; width: 176px; height: 176px; border-radius: 50%;
   background: var(--cyan); color: #070a16; display: grid; place-items: center; text-align: center;
-  font-family: var(--font-head); font-weight: 700; font-size: 1.15rem; line-height: 1.15;
+  font-family: var(--font-head); font-weight: 700; font-size: 1.05rem; line-height: 1.15;
   transform: rotate(12deg); padding: 18px; margin: 0;
 }
-.sticker small { font-size: .85rem; font-weight: 600; }
+.sticker small { font-size: .72rem; font-weight: 600; line-height: 1.25; }
 .marquee-clip { overflow: hidden; margin: 12px 0 8px; padding: 18px 0; }
 .marquee { overflow: hidden; background: var(--grad); color: #070a16; transform: rotate(-1.5deg); }
 .marquee__track {
@@ -692,7 +692,7 @@ p.trust-line { margin: 14px 0 0; max-width: 40rem; font-weight: 600; color: var(
 @media (max-width: 700px) {
   .mega-offers, .levels, .vals { grid-template-columns: 1fr; }
   .mega { padding: 28px 22px; }
-  .sticker { position: static; margin: 8px 0 18px; width: 148px; height: 148px; }
+  .sticker { position: static; margin: 8px 0 18px; width: 164px; height: 164px; }
   .hero--allin .trust-line { margin-right: 0; }
   .form-card { padding: 22px 18px; border-radius: 22px; }
   .form-card--allin, .form-card--allin .form { transform: none; }
@@ -741,7 +741,7 @@ p.trust-line { margin: 14px 0 0; max-width: 40rem; font-weight: 600; color: var(
   transform: rotate(-0.7deg);
 }
 .form-card--allin .form { transform: rotate(0.7deg); }
-.vals--3 { grid-template-columns: repeat(3, 1fr); }
+.vals--3 { grid-template-columns: repeat(2, 1fr); }
 .val h3 a { color: var(--text); text-decoration: none; }
 .val h3 a:hover { color: var(--cyan); }
 .mega-offers--3 { grid-template-columns: repeat(3, 1fr); }
