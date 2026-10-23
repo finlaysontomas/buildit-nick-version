@@ -29,11 +29,12 @@ Check a phone width in the browser's device toolbar (about 390px wide). The menu
 | How it works | `how-it-works.html` | The four steps, with hosting called out as optional |
 | About | `about.html` | First person. Northern Beaches. Links to Why I'm doing this. No invented suburbs or life history |
 | FAQ | `faq.html` | The live-site questions, updated where hosting changed, plus the new offers |
-| Contact | `contact.html` | Phone, email, the Innovo line, and a form that does not use a server |
-| Ideas from Dad | `ideas.html` | These notes, on the site. Hidden from search (`noindex`) |
+| Contact | `contact.html` | Phone, email, and a form that does not use a server |
+| Start your project | `brief.html` | Client design brief. Opens an email draft to tomas@buildit.net.au. Nothing is stored on the site |
+| Ideas from Dad | `ideas.html` | Notes file kept in the repo. `noindex`. Not linked from the nav, footer, or sitemap |
 | Examples | `examples/cafe/`, `examples/electrician/` | Tomas's demo sites, unchanged apart from the "Back to BuildIT" link, which now opens the Work page |
 
-The same list, with the reason for each addition, is on the [Ideas from Dad](ideas.html) page (footer link).
+The change log lives in this README. `ideas.html` is still in the repo, marked `noindex`, and is not linked from the nav, footer, or sitemap.
 
 ## Ideas from Dad
 
@@ -89,10 +90,13 @@ Each item is something a small web-business site benefits from. Take the ones yo
 - `work/`: screenshots of Lux-Lashes and Innovo
 - `assets/work/perfectjobs.png`: screenshot of the Perfect Jobs & Adventures homepage, used on the Current work cards
 - `examples/cafe/` and `examples/electrician/`: the two demo sites (each a single `index.html` with its own CSS, photos in `img/`, and `preview.webp` for the thumbnail)
-- `netlify.toml`: only used if the site is also published on Netlify. GitHub Pages ignores it
+- `netlify.toml`: `publish = "."` and no build command, so Netlify can serve the files as they are. GitHub Pages ignores it
+- `brief.html`: the Start your project design brief
 - `.nojekyll`: see above
 
-`ideas.html` is left out of `sitemap.xml` and marked `noindex`. Remove the footer link if you do not want customers to see the notes.
+`ideas.html` is left out of `sitemap.xml`, marked `noindex`, and is not linked from the nav or footer.
+
+21. **Start your project.** `brief.html` is a grouped design brief in the All In look: business, goals, pages, look and feel, features, content, and plan. The page note says up to 5 pages on the $1,250 build, up to 8 on Website + Care, and extra pages at $150 ex GST. Submit uses the same mailto draft as the contact form, to **tomas@buildit.net.au**. The header button on each page says Start your project. Pricing, How it works, and Contact link to it. `netlify.toml` publishes `.` with no build command. Canonical URLs stay on the GitHub Pages address. No CNAME is set.
 
 ## Changing the business name, email, phone or prices
 

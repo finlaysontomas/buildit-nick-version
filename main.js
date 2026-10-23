@@ -83,6 +83,61 @@ const SITE = {
     });
   }
 
+  /* ---------- Design brief: same mailto draft, no server ---------- */
+  const briefForm = document.querySelector('[data-brief-form]');
+  if (briefForm) {
+    const joined = (data, name) => {
+      const values = data.getAll(name).map((v) => String(v).trim()).filter(Boolean);
+      return values.length ? values.join(', ') : '(none)';
+    };
+    briefForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!briefForm.checkValidity()) {
+        briefForm.reportValidity();
+        return;
+      }
+      const data = new FormData(briefForm);
+      const line = (label, value) => `${label}: ${String(value || '').trim() || '(not given)'}`;
+      const body = [
+        'Design brief',
+        '',
+        line('Name', data.get('name')),
+        line('Business', data.get('business')),
+        line('Email', data.get('email')),
+        line('Phone', data.get('phone')),
+        line('Suburb', data.get('suburb')),
+        line('Current site', data.get('current-site')),
+        '',
+        line('Goal', data.get('goal')),
+        line('Customers', data.get('customers')),
+        '',
+        line('Pages', joined(data, 'pages')),
+        line('Other pages', data.get('pages-other')),
+        '',
+        line('Styles', joined(data, 'styles')),
+        line('Colours liked', data.get('colours-like')),
+        line('Colours disliked', data.get('colours-dislike')),
+        line('Logo', data.get('logo')),
+        line('Site liked 1', data.get('like-1')),
+        line('Site liked 2', data.get('like-2')),
+        line('Site liked 3', data.get('like-3')),
+        '',
+        line('Features', joined(data, 'features')),
+        line('Other features', data.get('features-other')),
+        '',
+        line('Content', data.get('content')),
+        '',
+        line('Plan', data.get('plan')),
+        line('Launch', data.get('launch')),
+        line('Anything else', data.get('else')),
+      ].join('\n');
+      const thanks = document.getElementById('brief-thanks');
+      briefForm.hidden = true;
+      if (thanks) thanks.hidden = false;
+      window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent('Design brief')}&body=${encodeURIComponent(body)}`;
+    });
+  }
+
   /* ---------- Scroll reveal ---------- */
   const reveals = document.querySelectorAll('.reveal');
   if (reduceMotion || !('IntersectionObserver' in window)) {
