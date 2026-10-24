@@ -50,14 +50,45 @@ const SITE = {
     });
   }
 
-  /* ---------- Contact form posts to FormSubmit. Only the plan link is filled here. ---------- */
+  /* ---------- Netlify Forms: POST url-encoded to /, then show the thanks message. ---------- */
+  const postNetlifyForm = (form, thanksId, statusId) => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      const status = document.getElementById(statusId);
+      const thanks = document.getElementById(thanksId);
+      const button = form.querySelector('[type="submit"]');
+      if (button) button.disabled = true;
+      if (status) status.textContent = '';
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      }).then((res) => {
+        if (!res.ok) throw new Error(String(res.status));
+        form.hidden = true;
+        if (thanks) thanks.hidden = false;
+      }).catch(() => {
+        if (button) button.disabled = false;
+        if (status) status.textContent = 'That did not send. Email me at tomas@buildit.net.au and I will get back to you myself.';
+      });
+    });
+  };
+
   const contactForm = document.querySelector('[data-contact-form]');
   if (contactForm) {
     const planInput = contactForm.querySelector('[name="plan"]');
     const wantedPlan = new URLSearchParams(window.location.search).get('plan');
     const knownPlans = ['design', 'design-hosting', 'hosting', 'social', 'charity', 'founding', 'unsure'];
     if (planInput && knownPlans.includes(wantedPlan)) planInput.value = wantedPlan;
+    postNetlifyForm(contactForm, 'contact-thanks', 'form-status');
   }
+
+  const briefForm = document.querySelector('[data-brief-form]');
+  if (briefForm) postNetlifyForm(briefForm, 'brief-thanks', 'brief-status');
 
   /* ---------- Scroll reveal ---------- */
   const reveals = document.querySelectorAll('.reveal');

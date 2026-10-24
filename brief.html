@@ -84,12 +84,11 @@
       <div class="container brief-wrap">
         <h2 id="brief-title" class="visually-hidden">Design brief</h2>
         <div class="form-card form-card--allin">
-          <form class="form brief-form" data-brief-form action="https://formsubmit.co/tomas@buildit.net.au" method="POST">
-            <input type="hidden" name="_subject" value="BuildIT design brief">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://buildit.net.au/thanks.html">
-            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+          <form class="form brief-form" name="brief" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" data-brief-form>
+            <input type="hidden" name="form-name" value="brief">
+            <p hidden>
+              <label>Don’t fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
             <fieldset>
               <legend>1. About you and your business</legend>
               <div class="form__row">
@@ -201,7 +200,12 @@
 
             <button class="btn btn--primary" type="submit">Send my brief</button>
             <p class="brief-note">If the form doesn't send, email <a href="mailto:tomas@buildit.net.au?subject=Design%20brief" data-mailto data-subject="Design brief" data-site="email">tomas@buildit.net.au</a>.</p>
+            <p class="form__status" id="brief-status" role="status" aria-live="polite"></p>
           </form>
+          <div id="brief-thanks" hidden>
+            <h2>Thanks. I have your brief.</h2>
+            <p>I'll read it and get back to you myself. If you don't hear from me, email <a href="mailto:tomas@buildit.net.au?subject=Design%20brief" data-mailto data-subject="Design brief" data-site="email">tomas@buildit.net.au</a>.</p>
+          </div>
         </div>
       </div>
     </section>
