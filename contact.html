@@ -107,11 +107,16 @@
       <div class="container contact-layout">
         <div class="contact-intro">
           <h2 id="form-title" class="why-title">Tell me about your business</h2>
-          <p>The form opens an email draft. Nothing is stored on this site. For a full brief, <a href="brief.html">start your project</a>.</p>
+          <p>The form emails me directly. You can also <a href="mailto:tomas@buildit.net.au?subject=Website%20enquiry" data-mailto data-subject="Website enquiry">email me</a>. For a full brief, <a href="brief.html">start your project</a>.</p>
         </div>
         <div class="form-card form-card--allin">
-          <form class="form" data-contact-form action="mailto:tomas@buildit.net.au" method="post" enctype="text/plain">
+          <form class="form" data-contact-form action="https://formsubmit.co/tomas@buildit.net.au" method="POST">
             <input type="hidden" name="plan" value="">
+            <input type="hidden" name="_subject" value="BuildIT website enquiry">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://buildit.net.au/thanks.html">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
             <div class="form__row">
               <label>
                 <span>Name</span>

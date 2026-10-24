@@ -29,8 +29,9 @@ Check a phone width in the browser's device toolbar (about 390px wide). The menu
 | How it works | `how-it-works.html` | The four steps, with hosting called out as optional |
 | About | `about.html` | First person. Northern Beaches. Links to Why I'm doing this. No invented suburbs or life history |
 | FAQ | `faq.html` | The live-site questions, updated where hosting changed, plus the new offers |
-| Contact | `contact.html` | Phone, email, and a form that does not use a server |
-| Start your project | `brief.html` | Client design brief. Opens an email draft to tomas@buildit.net.au. Nothing is stored on the site |
+| Contact | `contact.html` | Phone, email, and a form that emails tomas@buildit.net.au through FormSubmit |
+| Start your project | `brief.html` | Client design brief. Posts to the same FormSubmit address. Mailto stays as a fallback |
+| Thanks | `thanks.html` | The page FormSubmit opens after a contact or brief form is sent |
 | Ideas from Dad | `ideas.html` | Notes file kept in the repo. `noindex`. Not linked from the nav, footer, or sitemap |
 | Examples | `examples/cafe/`, `examples/electrician/` | Tomas's demo sites, unchanged apart from the "Back to BuildIT" link, which now opens the Work page |
 
@@ -48,7 +49,7 @@ Each item is something a small web-business site benefits from. Take the ones yo
 
 4. **About you, and the Northern Beaches.** Local customers want a name and a place. The About page says "I'm Tomas. BuildIT is my studio." and links to Why I'm doing this. The same place shows in the home eyebrow, the footer, and the page's schema `areaServed`. No suburbs, work history, client numbers or awards were invented.
 
-5. **A contact form that does not pretend to send.** GitHub Pages cannot run a backend. The form is markup: name, business, email, phone, plan and message. The button opens an email draft to BuildIT. Phone and email buttons stay on the page. The status line says nothing was stored on a server.
+5. **Contact and brief forms email Tomas directly.** Both forms post to FormSubmit at `https://formsubmit.co/tomas@buildit.net.au`. Contact uses the subject "BuildIT website enquiry". The brief uses "BuildIT design brief". Both use a table template, captcha off, a `_honey` honeypot, and `_next` `https://buildit.net.au/thanks.html`. `main.js` does not turn submit into a mailto. Phone and email links stay as a fallback. The first submission sends FormSubmit's one-time activation email.
 
 6. **A next step on every page.** Each customer page ends with Contact, Call, or both, plus the phone number and email. People decide on the page they are already reading.
 
@@ -76,7 +77,7 @@ Each item is something a small web-business site benefits from. Take the ones yo
 
 18. **Page limits.** Design & build is **$1,250 ex GST** for up to 5 pages and 3 revisions. Design & build + Hosting & monitoring is **$1,800 up front, then $99 a month, ex GST** for up to 8 pages, basic SEO set-up (titles, descriptions, a Google Business link, and analytics), hosting and monitoring, and 3 revisions. Extra pages are **$150 per page, ex GST**, on either paid plan. Those limits are on the home price cards, Pricing (paid levels, paid plan cards, and the comparison table), Services, and the paid FAQ answers, including "What if I need more pages?" They are not written into the free offers.
 
-19. **Email.** Tomas's address is **tomas@buildit.net.au**, in `main.js`, the contact blocks, mailto links, the contact form action and its draft, structured data, `404.html`, and the two example sites. The public canonical URL is still the GitHub Pages address. No canonical domain and no CNAME are set. The site moves to buildit.net.au on Netlify later.
+19. **Email.** Tomas's address is **tomas@buildit.net.au**, in `main.js`, the contact blocks, mailto links, the FormSubmit form action, structured data, `404.html`, and the two example sites. The public canonical URL is still the GitHub Pages address. No CNAME is set. FormSubmit's thank-you address is `https://buildit.net.au/thanks.html`.
 
 20. **Prices are ex GST.** Said on the Pricing page: in the introduction, above the four offers, on the comparison headings, in the table caption, and in the FAQ. The home price section says it too, so those figures are not read as GST-inclusive. The dollar amounts are unchanged. No GST was added on top.
 
@@ -84,7 +85,7 @@ Each item is something a small web-business site benefits from. Take the ones yo
 
 - `index.html`, `story.html`, `offers.html` and the other pages listed above
 - `styles.css`: Tomas's styles, plus layout for the page heroes, comparison table, form, placeholders and the earlier menu breakpoint
-- `main.js`: site details (name, email, phone), mobile nav, the contact-form mailto, scroll reveal, card tilt, cursor trail
+- `main.js`: site details (name, email, phone), mobile nav, the contact-form plan link, scroll reveal, card tilt, cursor trail
 - `404.html`: missing URLs. On GitHub project Pages, a small script points its CSS at `/buildit-nick-version/` when the missing address is nested
 - `favicon.svg`, `og-image.png`, `robots.txt`, `sitemap.xml`
 - `work/`: screenshots of Lux-Lashes and Innovo
@@ -96,7 +97,7 @@ Each item is something a small web-business site benefits from. Take the ones yo
 
 `ideas.html` is left out of `sitemap.xml`, marked `noindex`, and is not linked from the nav or footer.
 
-21. **Start your project.** `brief.html` is a grouped design brief in the All In look: business, goals, pages, look and feel, features, content, and plan. The page note says up to 5 pages on the $1,250 build, up to 8 on Website + Care, and extra pages at $150 ex GST. Submit uses the same mailto draft as the contact form, to **tomas@buildit.net.au**. The header button on each page says Start your project. Pricing, How it works, and Contact link to it. `netlify.toml` publishes `.` with no build command. Canonical URLs stay on the GitHub Pages address. No CNAME is set.
+21. **Start your project.** `brief.html` is a grouped design brief in the All In look: business, goals, pages, look and feel, features, content, and plan. The paid-plan note says up to 5 pages on the $1,250 build, up to 8 on Website + Care, and extra pages at $150 ex GST. Submit posts to FormSubmit with the subject "BuildIT design brief", then opens `thanks.html`. A mailto link stays on the form as a fallback. The header button on each page says Start your project. Pricing, How it works, and Contact link to it. `netlify.toml` publishes `.` with no build command. Canonical URLs stay on the GitHub Pages address. No CNAME is set.
 
 ## Changing the business name, email, phone or prices
 

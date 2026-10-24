@@ -68,7 +68,7 @@
       <div class="container hero__inner">
         <p class="eyebrow">Start</p>
         <h1 id="page-title" class="hero__title">Start your <span class="gradient-text">project.</span></h1>
-        <p class="hero__sub">Tell me what the site has to do. I read every brief myself. Sending this opens an email draft. Nothing is stored on this site.</p>
+        <p class="hero__sub">Tell me what the site has to do. I read every brief myself. The form emails me directly. You can also <a href="mailto:tomas@buildit.net.au?subject=Design%20brief" data-mailto data-subject="Design brief">email me</a>.</p>
       </div>
     </section>
     <div class="marquee-clip">
@@ -84,7 +84,12 @@
       <div class="container brief-wrap">
         <h2 id="brief-title" class="visually-hidden">Design brief</h2>
         <div class="form-card form-card--allin">
-          <form class="form brief-form" data-brief-form action="mailto:tomas@buildit.net.au" method="post" enctype="text/plain">
+          <form class="form brief-form" data-brief-form action="https://formsubmit.co/tomas@buildit.net.au" method="POST">
+            <input type="hidden" name="_subject" value="BuildIT design brief">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://buildit.net.au/thanks.html">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
             <fieldset>
               <legend>1. About you and your business</legend>
               <div class="form__row">
@@ -195,12 +200,8 @@
             </fieldset>
 
             <button class="btn btn--primary" type="submit">Send my brief</button>
-            <p class="form__status" id="brief-status" role="status" aria-live="polite"></p>
+            <p class="brief-note">If the form doesn't send, email <a href="mailto:tomas@buildit.net.au?subject=Design%20brief" data-mailto data-subject="Design brief" data-site="email">tomas@buildit.net.au</a>.</p>
           </form>
-          <div class="brief-thanks" id="brief-thanks" hidden>
-            <h2>Thanks. Your brief is ready to send.</h2>
-            <p>I opened an email draft to me. If it didn't open, email <a href="mailto:tomas@buildit.net.au?subject=Design%20brief" data-mailto data-subject="Design brief" data-site="email">tomas@buildit.net.au</a>. Nothing is stored on this site. I'll get back to you myself.</p>
-          </div>
         </div>
       </div>
     </section>
