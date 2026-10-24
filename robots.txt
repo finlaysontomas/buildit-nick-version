@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://finlaysonnick74-source.github.io/buildit-nick-version/sitemap.xml
+Sitemap: https://buildit.net.au/sitemap.xml
