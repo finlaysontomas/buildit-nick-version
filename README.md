@@ -107,7 +107,7 @@ Also update the copies in each page's `<head>` (title, description, canonical, O
 
 The public site URL used for sharing is:
 
-`https://finlaysonnick74-source.github.io/buildit-nick-version/`
+`https://buildit.net.au/`
 
 It is written in each page's canonical and social tags, in `sitemap.xml`, in `robots.txt`, and in the JSON-LD on the home page. If the GitHub Pages address or a future domain is different, replace that URL everywhere. Social images must stay absolute (`https://…/og-image.png`).
 
@@ -118,7 +118,7 @@ Pages is not on for this repo yet. This session could not turn it on, because th
 1. Open [the Pages settings](https://github.com/finlaysonnick74-source/buildit-nick-version/settings/pages) for this repo.
 2. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
 3. Set **Branch** to `main` and the folder to **`/ (root)`**, then save.
-4. Wait until the Pages panel shows a live URL. For this repo it should be `https://finlaysonnick74-source.github.io/buildit-nick-version/`.
+4. Wait until the Pages panel shows a live URL. For this repo it should be `https://buildit.net.au/`.
 5. You do not need a GitHub Actions workflow. There is no build. `.nojekyll` is already in the root so Pages will not run Jekyll.
 
 If the URL GitHub shows is different from the one above, update the absolute URLs described in the previous section, or link previews and the sitemap will point at the wrong place.
